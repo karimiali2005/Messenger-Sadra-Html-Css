@@ -1,0 +1,1045 @@
+/* css reset */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Fonts */
+
+@font-face {
+    font-family: Vazir;
+    src: url('../vazir-font-v22.0.0/Vazir.eot');
+    src: url('../vazir-font-v22.0.0/Vazir.eot?#iefix') format('embedded-opentype'), url('../vazir-font-v22.0.0/Vazir.woff2') format('woff2'), url('../vazir-font-v22.0.0/Vazir.woff') format('woff'), url('../vazir-font-v22.0.0/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* General code */
+
+body {
+    direction: rtl;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* main */
+
+.main {
+    height: 100vh;
+    width: 100%;
+}
+
+.main>.right {
+    height: 100vh;
+    width: 32%;
+    float: right;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+.main>.left {
+    height: 100vh;
+    z-index: 0;
+    position: relative;
+    width: 68%;
+    float: left;
+    background-color: rgb(243, 243, 253);
+}
+
+
+/* right contact me*/
+
+.main>.right>.contact-me {
+    width: 100%;
+    position: relative;
+    height: 100px;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: space-between;
+    direction: ltr;
+}
+
+.main>.right>.contact-me:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 3px;
+    z-index: -1;
+    /* transform: scale(1); */
+    box-shadow: 0px 0px 10px 1px #000000;
+}
+
+.main>.right>.contact-me>.svgs {
+    display: flex;
+    direction: ltr;
+    width: 65px;
+    justify-content: space-between;
+    height: 50px;
+    padding: 10px 0px 0px 15px;
+}
+
+.main>.right>.contact-me>.svgs svg {
+    fill: #666;
+}
+
+.main>.right>.contact-me>.svgs svg:hover {
+    fill: #333;
+}
+
+.main>.right>.contact-me>.contact-content {
+    display: flex;
+    height: 100%;
+    direction: rtl;
+    align-items: center;
+    width: 250px;
+    justify-content: space-around;
+    margin-right: 5px;
+}
+
+.main>.right>.contact-me>.contact-content>.img {
+    display: flex;
+}
+
+.main>.right>.contact-me>.contact-content>.img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(132, 132, 132, 0.75);
+}
+
+.main>.right>.contact-me>.contact-content>.description {
+    display: grid;
+    width: 151px;
+    align-items: center;
+    grid-template: 40px 40px/1fr;
+}
+
+.main>.right>.contact-me>.contact-content>.description>h4 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Vazir';
+    display: flex;
+}
+
+.main>.right>.contact-me>.contact-content>.description>h4 span {
+    display: grid;
+    align-content: center;
+    padding-right: 10px;
+}
+
+.main>.right>.contact-me>.contact-content>.description>h4 svg {
+    width: 15px;
+    height: 15px;
+    fill: #666;
+}
+
+.main>.right>.contact-me>.contact-content>.description>h4 a {
+    margin-top: 4px;
+}
+
+.main>.right>.contact-me>.contact-content>.description>h4 svg:hover {
+    fill: #333;
+}
+
+.main>.right>.contact-me>.contact-content>.description>p {
+    font-family: 'Vazir';
+    font-size: 10px;
+    line-height: 16px;
+    color: #777;
+}
+
+
+/* right search */
+
+.main>.right>.search {
+    height: 75px;
+    width: 100%;
+    display: grid;
+    align-items: end;
+    justify-items: center;
+}
+
+.main>.right>.search>div {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: 70%;
+    justify-content: center;
+}
+
+.main>.right>.search>div .svg1 {
+    position: absolute;
+    right: 3px;
+    bottom: 2px;
+}
+
+.main>.right>.search>div .svg1 svg {
+    fill: #888;
+}
+
+.main>.right>.search>div input {
+    border: none;
+    border-bottom: 1.2px solid #333;
+    width: 100%;
+    height: 25px;
+    padding-right: 30px;
+    font-size: 18px;
+    font-family: 'Vazir';
+    outline: none;
+}
+
+
+/* right contact others */
+
+.main>.right>.contact-others {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    direction: ltr;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    align-items: center;
+}
+
+.main>.right>.contact-others:hover {
+    background-color: #eeeeee9a;
+    cursor: pointer;
+}
+
+.main>.right>.contact-others::after {
+    content: "";
+    position: absolute;
+    width: 75%;
+    bottom: 0px;
+    display: flex;
+    z-index: 0;
+    border-bottom: 1px solid #d4d4d4;
+    left: 13%;
+}
+
+.main>.right>.contact-others>.time-pm {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-family: 'Vazir';
+    grid-template: 40px 40px/41px;
+}
+
+.main>.right>.contact-others>.time-pm span:first-child {
+    color: #999;
+}
+
+.main>.right>.contact-others>.time-pm span:last-child {
+    visibility: visible;
+    background-color: #42996d;
+    border-radius: 50%;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(151, 151, 151, 0.75);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(151, 151, 151, 0.75);
+    box-shadow: 0px 0px 3px 1px rgba(151, 151, 151, 0.75)
+}
+
+.main>.right>.contact-others>.contact-content {
+    display: flex;
+    direction: rtl;
+    margin-right: 5px;
+    width: 225px;
+}
+
+.main>.right>.contact-others>.contact-content .img img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 5px 1px rgb(165, 165, 165);
+    -moz-box-shadow: 0px 0px 5px 1px rgb(165, 165, 165);
+    box-shadow: 0px 0px 5px 1px rgb(165, 165, 165);
+}
+
+.main>.right>.contact-others>.contact-content .description {
+    display: grid;
+    grid-template: 40px 40px /1fr;
+    align-items: center;
+    margin-right: 15px;
+    width: 130px;
+}
+
+.main>.right>.contact-others>.contact-content .description h4 {
+    font-family: 'Vazir';
+    font-size: 20px;
+    color: #333;
+}
+
+.main>.right>.contact-others>.contact-content .description p {
+    font-family: 'Vazir';
+    font-size: 12px;
+    color: #a0a0a0;
+}
+
+
+/* scrollbar */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f7f7f7;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #c3c3c3;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(184, 184, 184);
+}
+
+
+/* left */
+
+
+/* left header */
+
+.main>.left>.header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #eee;
+    direction: ltr;
+    position: relative;
+}
+
+.main>.left>.header:after {
+    content: "";
+    position: absolute;
+    width: 96%;
+    bottom: 3px;
+    z-index: -1;
+    box-shadow: 0px 0px 6px 2px #909090;
+}
+
+.main>.left>.header>.right {
+    direction: rtl;
+    display: flex;
+    width: 210px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main>.left>.header>.right>.img1 img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.main>.left>.header>.right>.description {
+    display: grid;
+    grid-template: 40px 40px /1fr;
+    align-items: center;
+    width: 125px;
+}
+
+.main>.left>.header>.right>.description h4 {
+    font-size: 20px;
+    font-family: 'Vazir';
+}
+
+.main>.left>.header>.right>.description p {
+    font-family: 'Vazir';
+    font-size: 12px;
+    color: #777;
+}
+
+.main>.left>.header>.left {
+    display: flex;
+    width: 75px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main>.left>.header>.left svg {
+    width: 25px;
+    height: 25px;
+    fill: #666;
+}
+
+.main>.left>.header>.left svg:hover {
+    fill: #333;
+    cursor: pointer;
+}
+
+
+/* main left chat screen*/
+
+.main>.left>.chat-screen {
+    width: 68%;
+    position: fixed;
+    overflow: scroll;
+    bottom: 60px;
+    background-color: #def0ff;
+    top: 80px;
+    overflow-x: hidden;
+    padding: 0 30px;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    z-index: -2;
+}
+
+.main>.left>.chat-screen>.Container {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.main>.left>.chat-screen>.Container>.me {
+    width: 100%;
+    display: block;
+    text-align: end;
+    margin-top: 10px;
+}
+
+.main>.left>.chat-screen>.Container>.me .massage {
+    width: auto;
+    background-color: rgb(220, 248, 198);
+    display: inline-block;
+    border-radius: 10px;
+    padding: 8px 10px;
+    grid-gap: 0px;
+    padding-bottom: 4px;
+    max-width: 65%;
+    position: relative;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(132, 132, 132, 0.26);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(132, 132, 132, 0.26);
+    box-shadow: 0px 1px 5px 0px rgba(132, 132, 132, 0.26);
+}
+
+.main>.left>.chat-screen>.Container>.me .massage .text {
+    font-family: 'Vazir';
+    font-size: 17px;
+    direction: ltr;
+    line-height: 20px;
+}
+
+.main>.left>.chat-screen>.Container>.me .massage .text-bottom {
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: right;
+    align-items: center;
+    display: flex;
+}
+
+.main>.left>.chat-screen>.Container>.me .massage .text-bottom .svg3 {
+    padding-right: 4px;
+}
+
+.main>.left>.chat-screen>.Container>.me .massage .text-bottom .svg3 svg {
+    width: 14px;
+    height: 14px;
+    margin-top: 0px;
+    fill: rgb(43, 222, 255);
+}
+
+.main>.left>.chat-screen>.Container>.me .massage .text-bottom span:first-child {
+    font-family: 'Vazir';
+}
+
+.main>.left>.chat-screen>.Container>.other {
+    width: 100%;
+    display: block;
+    text-align: start;
+}
+
+.main>.left>.chat-screen>.Container>.other .massage {
+    background-color: rgb(248, 248, 248);
+}
+
+
+/* main left send massage*/
+
+.main>.left>.send-massage {
+    position: fixed;
+    bottom: 0;
+    width: 68%;
+    background-color: #eeeeee;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    direction: ltr;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.main>.left>.send-massage>.send:hover {
+    cursor: pointer;
+}
+
+.main>.left>.send-massage>.send>.svg6 {
+    background-color: #0c7b57;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.main>.left>.send-massage>.send>.svg6:hover {
+    background-color: #08694b;
+}
+
+.main>.left>.send-massage>.send>.svg6 svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+.main>.left>.send-massage>.text-input {
+    display: flex;
+    direction: rtl;
+    width: 88%;
+    position: relative;
+}
+
+.main>.left>.send-massage>.text-input>.svg7 {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.main>.left>.send-massage>.text-input>.svg7 svg {
+    width: 25px;
+    height: 25px;
+    fill: #6c6c6c;
+}
+
+.main>.left>.send-massage>.text-input>.svg7 svg:hover {
+    cursor: pointer;
+    fill: #333;
+}
+
+.main>.left>.send-massage>.text-input>input {
+    width: 98%;
+    padding: 5px;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 5px 0px rgba(205, 205, 205, 0.75);
+    padding-right: 45px;
+    padding-left: 89px;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Vazir';
+}
+
+.main>.left>.send-massage>.text-input>.svg8 {
+    position: absolute;
+    left: 56px;
+    top: 9px;
+}
+
+.main>.left>.send-massage>.text-input>.svg8 svg {
+    width: 25px;
+    height: 25px;
+    fill: #6c6c6c;
+}
+
+.main>.left>.send-massage>.text-input>.svg8 svg:hover {
+    cursor: pointer;
+    fill: #333;
+}
+
+.main>.left>.send-massage>.text-input>.svg9 {
+    position: absolute;
+    left: 20px;
+    top: 6px;
+    width: 25px;
+}
+
+.main>.left>.send-massage>.text-input>.svg9 svg {
+    width: 28px;
+    height: 28px;
+    fill: #6c6c6c;
+}
+
+.main>.left>.send-massage>.text-input>.svg9 svg:hover {
+    cursor: pointer;
+    fill: #333;
+}
+
+
+/* media screen 992px */
+
+@media screen and (max-width:992px) {
+    .main>.right {
+        width: 37%;
+    }
+    .main>.left {
+        width: 63%;
+    }
+    .main>.left>.chat-screen {
+        width: 63%;
+    }
+    .main>.left>.send-massage {
+        width: 63%;
+    }
+}
+
+
+/* media screen 830px */
+
+@media screen and (max-width:830px) {
+    .main>.left {
+        width: 59%;
+    }
+    .main>.right {
+        width: 41%;
+    }
+    .main>.left>.header {
+        height: 70px;
+        padding: 10px;
+    }
+    .main>.left>.chat-screen {
+        width: 59%;
+        top: 70px;
+    }
+    .main>.left>.send-massage {
+        width: 59%;
+    }
+    .main>.left>.header>.left {
+        width: 60px;
+    }
+    .main>.left>.header>.left>.svg1 svg,
+    .main>.left>.header>.left>.svg2 svg {
+        width: 20px;
+        height: 20px;
+    }
+    .main>.left>.header>.right {
+        width: 200px;
+    }
+    .main>.left>.header>.right>.img1 img {
+        height: 60px;
+        width: 60px;
+    }
+    .main>.left>.header>.right>.description {
+        grid-template: 30px 30px /1fr;
+        width: 125px;
+    }
+    .main>.left>.header>.right>.description h4 {
+        font-size: 18px;
+    }
+    .main>.left>.header>.right>.description p {
+        font-size: 10px;
+    }
+    .main>.left>.send-massage {
+        width: 59%;
+        height: 60px;
+        padding: 5px;
+        justify-content: space-around;
+    }
+    .main>.left>.send-massage>.send>.svg6 {
+        width: 40px;
+        height: 40px;
+    }
+    .main>.left>.send-massage>.send>.svg6 svg {
+        width: 25px;
+        height: 25px;
+    }
+    .main>.left>.send-massage>.text-input {
+        width: 85%;
+    }
+    .main>.right>.contact-me {
+        height: 70px;
+    }
+    .main>.right>.contact-me>.svgs {
+        width: 45px;
+        height: 50px;
+        padding: 10px 0px 0px 15px;
+    }
+    .main>.right>.contact-me>.svgs svg {
+        width: 16px;
+        height: 16px;
+    }
+    .main>.right>.contact-me>.contact-content {
+        width: 250px;
+    }
+    .main>.right>.contact-me>.contact-content>.img img {
+        width: 60px;
+        height: 60px;
+    }
+    .main>.right>.contact-me>.contact-content>.description {
+        width: 151px;
+        grid-template: 35px 35px/1fr;
+    }
+    .main>.right>.contact-me>.contact-content>.description>h4 {
+        font-size: 17px;
+    }
+    .main>.right>.contact-me>.contact-content>.description>h4 svg {
+        width: 12px;
+        height: 12px;
+    }
+    .main>.right>.contact-me>.contact-content>.description>p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .main>.right>.search {
+        height: 50px;
+    }
+    .main>.right>.search>div {
+        width: 85%;
+    }
+    .main>.right>.contact-others {
+        height: 90px;
+        padding: 5px;
+    }
+    .main>.right>.contact-others>.time-pm {
+        grid-template: 30px 30px/41px;
+    }
+    .main>.right>.contact-others>.time-pm span:first-child {
+        font-size: 12px;
+    }
+    .main>.right>.contact-others>.time-pm span:last-child {
+        width: 25px;
+        height: 25px;
+        font-size: 11px;
+    }
+    .main>.right>.contact-others>.contact-content {
+        width: 225px;
+    }
+    .main>.right>.contact-others>.contact-content .img img {
+        width: 60px;
+        height: 60px;
+    }
+    .main>.right>.contact-others>.contact-content .description {
+        grid-template: 30px 30px /1fr;
+        margin-right: 10px;
+        width: 130px;
+    }
+    .main>.right>.contact-others>.contact-content .description h4 {
+        font-size: 18px;
+    }
+    .main>.right>.contact-others>.contact-content .description p {
+        font-size: 10px;
+    }
+    .main>.left>.chat-screen>.Container>.me .massage .text {
+        font-size: 14px;
+    }
+    .main>.left>.chat-screen>.Container>.me .massage .text-bottom {
+        margin-top: 5px;
+        font-size: 11px;
+    }
+}
+
+
+/* media screen 730px */
+
+@media screen and (max-width:730px) {
+    .main>.left>.send-massage {
+        height: 55px;
+    }
+    .main>.left>.send-massage>.text-input>input {
+        width: 98%;
+        padding: 5px;
+        height: 30px;
+    }
+    .main>.left>.chat-screen {
+        bottom: 55px;
+    }
+    .main>.left>.send-massage>.text-input>.svg8 {
+        left: 44px;
+        top: 10px;
+    }
+    .main>.left>.send-massage>.text-input>.svg8 svg {
+        width: 20px;
+        height: 20px;
+    }
+    .main>.left>.send-massage>.text-input>.svg9 {
+        left: 10px;
+        top: 8px;
+        width: 25px;
+    }
+    .main>.left>.send-massage>.text-input>.svg9 svg {
+        width: 23px;
+        height: 23px;
+    }
+    .main>.left>.send-massage>.text-input>.svg7 {
+        right: 10px;
+        top: 10px;
+    }
+    .main>.left>.send-massage>.text-input>.svg7 svg {
+        width: 20px;
+        height: 20px;
+    }
+    .main>.left>.send-massage>.send>.svg6 {
+        width: 35px;
+        height: 35px;
+    }
+    .main>.left>.send-massage>.send>.svg6 svg {
+        width: 20px;
+        height: 20px;
+    }
+    .main>.left>.send-massage>.send>.svg6 svg {
+        width: 20px;
+        height: 20px;
+    }
+    .main>.left>.send-massage>.send>.svg6 {
+        width: 35px;
+        height: 35px;
+    }
+    .main>.right>.contact-me>.contact-content>.description {
+        width: 121px;
+        grid-template: 35px/1fr;
+    }
+    .main>.right>.contact-me>.contact-content>.description>p {
+        font-size: 10px;
+        line-height: 15px;
+        display: none;
+    }
+    .main>.right>.contact-me>.svgs svg {
+        width: 18px;
+        height: 18px;
+    }
+    .main>.right>.contact-me>.svgs {
+        width: 58px;
+        height: 25px;
+        padding: 5px 0px 0px 10px;
+    }
+    .main>.right>.contact-others>.contact-content .description p {
+        font-size: 9px;
+    }
+    .main>.right>.contact-others>.contact-content .description h4 {
+        font-size: 16px;
+    }
+    .main>.left>.send-massage>.text-input>input {
+        width: 72%;
+        padding: 5px;
+        padding-right: 5px;
+        padding-left: 5px;
+        height: 30px;
+        padding-left: 66px;
+        padding-right: 33px;
+    }
+    .main>.right>.search>div input {
+        width: 87%;
+    }
+}
+
+
+/* media screen 650px */
+
+@media screen and (max-width:650px) {
+    .main>.left>.chat-screen {
+        padding: 0 10px;
+        width: 55%;
+    }
+    .main>.left {
+        width: 55%;
+    }
+    .main>.right {
+        width: 45%;
+    }
+    .main>.left>.send-massage {
+        width: 55%;
+    }
+    .main>.left>.send-massage>.text-input>input {
+        width: 60%;
+        font-size: 15px;
+    }
+    .main>.left>.send-massage>.text-input>.svg8 svg {
+        width: 19px;
+        height: 19px;
+    }
+    .main>.left>.send-massage>.text-input>.svg8 {
+        left: 43px;
+        top: 11px;
+    }
+    .main>.left>.send-massage>.text-input>.svg9 svg {
+        width: 21px;
+        height: 21px;
+    }
+    .main>.left>.chat-screen>.Container>.me .massage .text {
+        font-size: 12px;
+    }
+}
+
+
+/* media screen 576px */
+
+@media screen and (max-width:576px) {
+    .main>.left {
+        display: none;
+    }
+    .main>.right {
+        width: 100%;
+    }
+    .main>.right>.contact-me>.contact-content>.description>p {
+        font-size: 10px;
+        line-height: 15px;
+        display: block;
+    }
+    .main>.right>.contact-me>.contact-content>.description {
+        width: 150px;
+    }
+}

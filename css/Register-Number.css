@@ -1,0 +1,43 @@
+@import url(Login.css);
+section.login .right form {
+    height: 82px;
+    align-self: center;
+}
+
+section.login .right {
+    display: grid;
+    grid-template: repeat(3, 100px) 162px repeat(2, 70px)/1fr;
+}
+
+section.login .right div:nth-child(4) {
+    display: grid;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+section.login .right div:nth-child(4) a {
+    text-decoration: underline;
+}
+
+section.login .right div:nth-child(5) a:last-child {
+    background-color: #409d7e;
+    color: #fff;
+}
+
+section.login .right div:nth-child(5) a:first-child {
+    margin-left: 10px;
+    background-color: #fff;
+    border: 1px solid #409d7e;
+    color: #409d7e;
+}
+
+@media screen and (max-width: 768px) {
+    section.login .right form>div:last-child {
+        border-top: 0;
+    }
+    section.login .right form {
+        height: 68px;
+        align-self: center;
+    }
+}
